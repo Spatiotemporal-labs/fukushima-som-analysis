@@ -1,6 +1,6 @@
 # Fukushima Contamination Regime Discovery
 
-**Self-Organizing Map Classification of Radioactive Contamination Decay Regimes in the Fukushima Exclusion Zone (2011–2024)**
+**Self-Organizing Map Classification of Radioactive Contamination Decay Regimes in the Fukushima Exclusion Zone**
 
 This repository contains the code, figures, and key outputs for the analysis of spatiotemporal contamination decay patterns across the Fukushima Daiichi exclusion zone. A 5×5 Self-Organizing Map trained on 9 temporal dose-rate features discovers 6 distinct contamination decay regimes across 138,768 mesh cells, without imposing prior categories.
 
@@ -72,7 +72,7 @@ Six contamination decay regimes identified:
 
 If you use this code or data, please cite:
 
-> Al-Fatani, O. (2026). Discovery of Behavioral Contamination Regimes in the Fukushima Exclusion Zone Using Self-Organizing Maps. *[Journal TBD]*.
+> Fatani, O. (2026). Discovery of Behavioral Contamination Regimes in the Fukushima Exclusion Zone Using Self-Organizing Maps. *[Journal TBD]*.
 
 ## License
 
