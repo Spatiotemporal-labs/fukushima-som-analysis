@@ -1,0 +1,350 @@
+{
+  "generated_at": "2026-04-02T00:27:10+0300",
+  "pipeline_phase": "4_som_clustering",
+  "input_file": "output/feature_matrix.parquet",
+  "n_observations": 138768,
+  "n_features": 9,
+  "training_config": {
+    "rlen": 2000,
+    "alpha": [0.05, 0.01],
+    "dist_fcts": "euclidean",
+    "mode": "online",
+    "seeds": [42, 123, 456, 789, 2024],
+    "grid_sizes_tested": ["5x5", "6x6"]
+  },
+  "all_runs": [
+    {
+      "grid": "5x5",
+      "seed": 42,
+      "qe": 1.1089,
+      "te": 0.2468,
+      "converged": true,
+      "rel_change": 0.0026
+    },
+    {
+      "grid": "5x5",
+      "seed": 123,
+      "qe": 1.1089,
+      "te": 0.3342,
+      "converged": true,
+      "rel_change": 0.0028
+    },
+    {
+      "grid": "5x5",
+      "seed": 456,
+      "qe": 1.111,
+      "te": 0.2393,
+      "converged": true,
+      "rel_change": 0.0024
+    },
+    {
+      "grid": "5x5",
+      "seed": 789,
+      "qe": 1.1116,
+      "te": 0.5131,
+      "converged": true,
+      "rel_change": 0.0027
+    },
+    {
+      "grid": "5x5",
+      "seed": 2024,
+      "qe": 1.1092,
+      "te": 0.405,
+      "converged": true,
+      "rel_change": 0.0028
+    },
+    {
+      "grid": "6x6",
+      "seed": 42,
+      "qe": 1.0169,
+      "te": 0.4666,
+      "converged": false,
+      "rel_change": 0.1214
+    },
+    {
+      "grid": "6x6",
+      "seed": 123,
+      "qe": 1.0183,
+      "te": 0.3837,
+      "converged": false,
+      "rel_change": 0.1188
+    },
+    {
+      "grid": "6x6",
+      "seed": 456,
+      "qe": 1.0178,
+      "te": 0.4982,
+      "converged": false,
+      "rel_change": 0.1189
+    },
+    {
+      "grid": "6x6",
+      "seed": 789,
+      "qe": 1.0177,
+      "te": 0.4592,
+      "converged": false,
+      "rel_change": 0.1237
+    },
+    {
+      "grid": "6x6",
+      "seed": 2024,
+      "qe": 1.0216,
+      "te": 0.3729,
+      "converged": false,
+      "rel_change": 0.1201
+    }
+  ],
+  "grid_comparison": {
+    "5x5": {
+      "mean_qe": 1.1099,
+      "mean_te": 0.3477,
+      "mean_ari": 0.853,
+      "min_ari": 0.802,
+      "ari_matrix": [
+        [1, 0.8773, 0.8038, 0.8967, 0.8722],
+        [0.8773, 1, 0.8437, 0.8666, 0.8764],
+        [0.8038, 0.8437, 1, 0.802, 0.8081],
+        [0.8967, 0.8666, 0.802, 1, 0.883],
+        [0.8722, 0.8764, 0.8081, 0.883, 1]
+      ]
+    },
+    "6x6": {
+      "mean_qe": 1.0185,
+      "mean_te": 0.4361,
+      "mean_ari": 0.7263,
+      "min_ari": 0.6417,
+      "ari_matrix": [
+        [1, 0.711, 0.7027, 0.8556, 0.7074],
+        [0.711, 1, 0.8347, 0.7231, 0.6417],
+        [0.7027, 0.8347, 1, 0.7412, 0.6596],
+        [0.8556, 0.7231, 0.7412, 1, 0.6862],
+        [0.7074, 0.6417, 0.6596, 0.6862, 1]
+      ]
+    }
+  },
+  "selected_model": {
+    "grid": "5x5",
+    "seed": 123,
+    "qe": 1.1089,
+    "te": 0.3342,
+    "n_neurons": 25,
+    "selection_reason": "Grid 5x5 selected (TE<0.10 and ARI>0.80); seed 123 had lowest QE"
+  },
+  "hierarchical_clustering": {
+    "method": "ward.D2",
+    "distance": "euclidean",
+    "k_selected": 6,
+    "k_silhouette": 6,
+    "k_gap": 1,
+    "silhouette_widths": {
+      "2": 0.2031,
+      "3": 0.1968,
+      "4": 0.2269,
+      "5": 0.2523,
+      "6": 0.2601,
+      "7": 0.2514,
+      "8": 0.2457,
+      "9": 0.1965,
+      "10": 0.2057
+    },
+    "gap_values": [
+      0.1642,
+      0.0846,
+      0.0671,
+      0.0639,
+      0.0758,
+      0.127,
+      0.1224,
+      0.1216,
+      0.1291,
+      0.1379
+    ],
+    "wss_values": {
+      "2": 174.7154,
+      "3": 140.825,
+      "4": 113.6036,
+      "5": 90.409,
+      "6": 70.6774,
+      "7": 61.3206,
+      "8": 52.2386,
+      "9": 45.0763,
+      "10": 38.1506
+    }
+  },
+  "clusters": [
+    {
+      "cluster_id": 1,
+      "label": "Slow Retention",
+      "n_observations": 13679,
+      "pct_of_total": 9.86,
+      "centroid_z": {
+        "total_decay_ratio_z": 2.112,
+        "log_linear_slope_z": 1.1304,
+        "log_linear_r2_z": -0.8249,
+        "early_slope_z": 0.7534,
+        "late_slope_z": 0.7215,
+        "residual_cv_z": -0.432,
+        "slope_ratio_z": -0.3754,
+        "n_increases_z": -0.0855,
+        "temporal_span_years_z": -2.3741
+      },
+      "centroid_original": {
+        "total_decay_ratio": 0.5364,
+        "log_linear_slope": -0.0002,
+        "log_linear_r2": 0.629,
+        "early_slope": -0,
+        "late_slope": -0.0002,
+        "residual_cv": 0.0872,
+        "slope_ratio": 2.174,
+        "n_increases": 4.743,
+        "temporal_span_years": 12.17
+      },
+      "neurons_in_cluster": [1, 2, 15, 20]
+    },
+    {
+      "cluster_id": 2,
+      "label": "Rapid Decay",
+      "n_observations": 8648,
+      "pct_of_total": 6.23,
+      "centroid_z": {
+        "total_decay_ratio_z": 0.3031,
+        "log_linear_slope_z": 0.8321,
+        "log_linear_r2_z": -1.5036,
+        "early_slope_z": -0.7977,
+        "late_slope_z": 0.8551,
+        "residual_cv_z": -0.2538,
+        "slope_ratio_z": 2.1701,
+        "n_increases_z": 1.9675,
+        "temporal_span_years_z": -1.2949
+      },
+      "centroid_original": {
+        "total_decay_ratio": 0.2483,
+        "log_linear_slope": -0.0002,
+        "log_linear_r2": 0.5602,
+        "early_slope": -0.0016,
+        "late_slope": -0.0001,
+        "residual_cv": 0.1264,
+        "slope_ratio": 9.395,
+        "n_increases": 10.9,
+        "temporal_span_years": 12.84
+      },
+      "neurons_in_cluster": [3, 4, 5]
+    },
+    {
+      "cluster_id": 3,
+      "label": "Standard Decay",
+      "n_observations": 76693,
+      "pct_of_total": 55.27,
+      "centroid_z": {
+        "total_decay_ratio_z": 0.1352,
+        "log_linear_slope_z": 0.0718,
+        "log_linear_r2_z": 0.0271,
+        "early_slope_z": 0.0321,
+        "late_slope_z": 0.1253,
+        "residual_cv_z": 0.2505,
+        "slope_ratio_z": 0.0587,
+        "n_increases_z": 0.0007,
+        "temporal_span_years_z": -0.0187
+      },
+      "centroid_original": {
+        "total_decay_ratio": 0.2215,
+        "log_linear_slope": -0.0004,
+        "log_linear_r2": 0.7154,
+        "early_slope": -0.0008,
+        "late_slope": -0.0002,
+        "residual_cv": 0.2374,
+        "slope_ratio": 3.406,
+        "n_increases": 5.002,
+        "temporal_span_years": 13.63
+      },
+      "neurons_in_cluster": [6, 7, 8, 9, 11, 12, 13, 18]
+    },
+    {
+      "cluster_id": 4,
+      "label": "Recontamination/Anomalous",
+      "n_observations": 10161,
+      "pct_of_total": 7.32,
+      "centroid_z": {
+        "total_decay_ratio_z": -0.4268,
+        "log_linear_slope_z": -0.619,
+        "log_linear_r2_z": 0.9483,
+        "early_slope_z": -0.5707,
+        "late_slope_z": -0.7334,
+        "residual_cv_z": 0.4619,
+        "slope_ratio_z": 0.4005,
+        "n_increases_z": 2.033,
+        "temporal_span_years_z": -1.2384
+      },
+      "centroid_original": {
+        "total_decay_ratio": 0.132,
+        "log_linear_slope": -0.0005,
+        "log_linear_r2": 0.8088,
+        "early_slope": -0.0014,
+        "late_slope": -0.0003,
+        "residual_cv": 0.2839,
+        "slope_ratio": 4.375,
+        "n_increases": 11.1,
+        "temporal_span_years": 12.87
+      },
+      "neurons_in_cluster": [10, 19, 22, 23]
+    },
+    {
+      "cluster_id": 5,
+      "label": "Consistent Exponential Decay",
+      "n_observations": 11466,
+      "pct_of_total": 8.26,
+      "centroid_z": {
+        "total_decay_ratio_z": 0.4103,
+        "log_linear_slope_z": -0.5514,
+        "log_linear_r2_z": 1.2681,
+        "early_slope_z": 0.0677,
+        "late_slope_z": -0.8769,
+        "residual_cv_z": -0.2827,
+        "slope_ratio_z": 0.2461,
+        "n_increases_z": -0.7705,
+        "temporal_span_years_z": -2.9484
+      },
+      "centroid_original": {
+        "total_decay_ratio": 0.2653,
+        "log_linear_slope": -0.0004,
+        "log_linear_r2": 0.8412,
+        "early_slope": -0.0007,
+        "late_slope": -0.0004,
+        "residual_cv": 0.12,
+        "slope_ratio": 3.937,
+        "n_increases": 2.688,
+        "temporal_span_years": 11.81
+      },
+      "neurons_in_cluster": [14, 24, 25]
+    },
+    {
+      "cluster_id": 6,
+      "label": "High Variability",
+      "n_observations": 18121,
+      "pct_of_total": 13.06,
+      "centroid_z": {
+        "total_decay_ratio_z": -0.5185,
+        "log_linear_slope_z": -0.8937,
+        "log_linear_r2_z": -0.9252,
+        "early_slope_z": -0.449,
+        "late_slope_z": -0.9316,
+        "residual_cv_z": 2.6675,
+        "slope_ratio_z": 0.0534,
+        "n_increases_z": -0.0351,
+        "temporal_span_years_z": -0.0161
+      },
+      "centroid_original": {
+        "total_decay_ratio": 0.1174,
+        "log_linear_slope": -0.0005,
+        "log_linear_r2": 0.6188,
+        "early_slope": -0.0012,
+        "late_slope": -0.0004,
+        "residual_cv": 0.7692,
+        "slope_ratio": 3.391,
+        "n_increases": 4.895,
+        "temporal_span_years": 13.63
+      },
+      "neurons_in_cluster": [16, 17, 21]
+    }
+  ]
+}

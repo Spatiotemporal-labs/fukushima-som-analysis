@@ -1,0 +1,1 @@
+Figure 5. Unified distance matrix (U-matrix) of the selected SOM. Each neuron is colored by the mean Euclidean distance to its grid neighbors in the 9-dimensional feature space. Bright regions indicate cluster boundaries. Numbers inside neurons show cluster assignments from Ward's D2 hierarchical clustering (k=6).

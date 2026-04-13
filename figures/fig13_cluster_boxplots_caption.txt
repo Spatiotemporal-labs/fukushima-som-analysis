@@ -1,0 +1,1 @@
+Figure S8. Boxplot distributions of 9 temporal features within each contamination decay regime (z-scored values). Based on a random subsample of 50,000 observations for visual clarity. The dashed line at y=0 indicates the population median. Box widths are proportional to sample size within each panel.

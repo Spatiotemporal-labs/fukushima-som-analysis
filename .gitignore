@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.venv/
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Large data (regenerate via pipeline scripts)
+dataset/
+output/filtered_emdb.csv
+output/filtered_emdb.parquet
+output/feature_matrix.parquet
+output/som_all_models_checkpoint.rds
+output/som_model.rds
+
+# Misc
+download_state.json
+item_info.json

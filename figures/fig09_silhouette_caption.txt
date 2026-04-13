@@ -1,0 +1,1 @@
+Figure S4. Silhouette plot for 6 clusters at the neuron level. Silhouette widths are computed on the 25 codebook vectors. Mean silhouette width = 0.26. Positive values indicate well-assigned neurons; negative values indicate potential misassignment.

@@ -1,0 +1,1 @@
+Figure 3. Parallel coordinates plot showing centroid profiles of 6 contamination decay regimes across 9 temporal features. Each line represents one regime. The dashed horizontal line at y=0 indicates the population median. Divergence from zero reflects how each regime differs from the typical decay behavior.

@@ -1,0 +1,1 @@
+Figure 2. Heatmap of cluster centroid z-scores across 9 temporal features. Rows represent 6 contamination decay regimes; columns represent SOM input features (IQR-scaled). Blue indicates below-median values; red indicates above-median. Numbers show exact z-score values. Cluster sizes (n) are annotated in row labels.

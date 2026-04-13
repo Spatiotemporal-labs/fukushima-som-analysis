@@ -1,0 +1,1 @@
+Figure S7. Distribution of 138,768 mesh cells across 6 contamination decay regimes. Bar heights show the number of cells; labels show count and percentage. The red dashed line indicates the 1% minimum cluster size threshold (n=1,388).

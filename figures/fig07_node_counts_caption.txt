@@ -1,0 +1,1 @@
+Figure S2. Number of observations mapped to each neuron in the selected 5x5 SOM. Color intensity (log-scaled) and text labels show the count of mesh cells assigned to each neuron as their best-matching unit. Uniform distribution indicates balanced SOM utilization.

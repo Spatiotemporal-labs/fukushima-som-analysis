@@ -1,0 +1,1 @@
+Figure S1. Training convergence curves for 10 SOM models (5 seeds x 2 grid sizes). Each line shows the mean distance from observations to their best-matching unit at each training iteration. The vertical dashed line at iteration 1500 indicates the expected convergence point. All models show asymptotic plateau behavior.

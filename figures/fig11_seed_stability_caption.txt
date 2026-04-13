@@ -1,0 +1,1 @@
+Figure S6. Pairwise Adjusted Rand Index (ARI) across 5 random seeds for each SOM grid size. ARI=1 indicates perfect agreement between clusterings; ARI=0 indicates chance-level agreement. Values > 0.80 indicate stable, reproducible cluster assignments.

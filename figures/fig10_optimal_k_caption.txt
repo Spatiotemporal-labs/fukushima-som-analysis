@@ -1,0 +1,1 @@
+Figure S5. Three methods for selecting the optimal number of clusters (k). Left: average silhouette width (higher is better; optimal at k=6). Center: within-cluster sum of squares (elbow method). Right: gap statistic with bootstrap SE bars (B=100; optimal at k=1). Red dashed line indicates the selected k=6.

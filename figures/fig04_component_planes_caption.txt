@@ -1,0 +1,1 @@
+Figure 4. Component planes of the 5x5 hexagonal Self-Organizing Map. Each panel shows one of the 9 temporal features, with neuron positions reflecting the SOM topology and color indicating the codebook value (z-scored). Spatial patterns across panels reveal correlated and independent feature dimensions.
