@@ -72,7 +72,7 @@ Six contamination decay regimes identified:
 
 If you use this code or data, please cite:
 
-> Fatani, O. (2026). Discovery of Behavioral Contamination Regimes in the Fukushima Exclusion Zone Using Self-Organizing Maps. *[Journal TBD]*.
+> Alsayed, E., Fatani, O., Quraby, W., Abulhasan, W., & Mubarki, S. (2026). Discovery of Contamination Decay Regimes in the Fukushima Exclusion Zone Using Self-Organizing Maps. *[Journal TBD]*.
 
 ## License
 
