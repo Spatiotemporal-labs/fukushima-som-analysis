@@ -87,7 +87,7 @@ A bootstrap clusterwise-stability check places all four regimes in the 0.6 to 0.
 
 If you use this code or data, please cite:
 
-> Alsyed, E., Fatani, O., Quraby, W., & Abulhasan, W. (2026). Discovery of Contamination Decay Regimes in the Fukushima Exclusion Zone Using Self-Organizing Maps. Manuscript in preparation.
+> Fatani, O., Quraby, W., Abulhasan, W., & Alsyed, E. (2026). Discovery of Contamination Decay Regimes in the Fukushima Exclusion Zone Using Self-Organizing Maps. Manuscript in preparation.
 
 ## License
 
