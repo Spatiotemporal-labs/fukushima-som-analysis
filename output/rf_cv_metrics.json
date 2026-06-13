@@ -1,0 +1,322 @@
+{
+  "meta": {
+    "seed": 42,
+    "n_3class": 131570,
+    "c4_dropped": 7196,
+    "edge_na_dropped": 2,
+    "predictors": [
+      "dist_fdnpp_km",
+      "initial_dose_rate",
+      "plume_axis_dev_deg",
+      "cs137_dep_kbqm2",
+      "landuse_macro",
+      "clay_pct",
+      "elev_m",
+      "slope_deg",
+      "dist_river_m",
+      "decon_ordinal",
+      "cs137_missing"
+    ],
+    "class_weights": {
+      "Slow Decay": 1.52619,
+      "Standard Decay": 0.52844,
+      "Near-Field Hotspot": 2.21041
+    },
+    "num_trees": 500,
+    "mtry": 3,
+    "headline": "spatial-block CV macro-F1",
+    "note": "Random CV reported only to expose autocorrelation inflation; NOT the headline."
+  },
+  "spatial_block_cv_10km": {
+    "macro_f1": 0.86906,
+    "balanced_accuracy": 0.864833,
+    "overall_accuracy": 0.88315,
+    "per_class": {
+      "class": [
+        "Slow Decay",
+        "Standard Decay",
+        "Near-Field Hotspot"
+      ],
+      "precision": [
+        0.81034,
+        0.898858,
+        0.913253
+      ],
+      "recall": [
+        0.750557,
+        0.91909,
+        0.924853
+      ],
+      "f1": [
+        0.779303,
+        0.908861,
+        0.919016
+      ],
+      "support": [
+        28736,
+        82993,
+        19841
+      ]
+    },
+    "confusion_matrix": [
+      {
+        "Slow Decay": 21568,
+        "Standard Decay": 7125,
+        "Near-Field Hotspot": 43,
+        "_row": "Slow Decay"
+      },
+      {
+        "Slow Decay": 5015,
+        "Standard Decay": 76278,
+        "Near-Field Hotspot": 1700,
+        "_row": "Standard Decay"
+      },
+      {
+        "Slow Decay": 33,
+        "Standard Decay": 1458,
+        "Near-Field Hotspot": 18350,
+        "_row": "Near-Field Hotspot"
+      }
+    ],
+    "n_folds": 5,
+    "block_size_m": 10000,
+    "per_fold": [
+      {
+        "fold": 1,
+        "n_test": 25404,
+        "macro_f1": 0.887302,
+        "balanced_acc": 0.889926,
+        "recall_by_class": {
+          "Slow Decay": 0.809803,
+          "Standard Decay": 0.918077,
+          "Near-Field Hotspot": 0.941899
+        }
+      },
+      {
+        "fold": 2,
+        "n_test": 26554,
+        "macro_f1": 0.864197,
+        "balanced_acc": 0.859844,
+        "recall_by_class": {
+          "Slow Decay": 0.755623,
+          "Standard Decay": 0.916047,
+          "Near-Field Hotspot": 0.907863
+        }
+      },
+      {
+        "fold": 3,
+        "n_test": 28380,
+        "macro_f1": 0.865202,
+        "balanced_acc": 0.863924,
+        "recall_by_class": {
+          "Slow Decay": 0.734043,
+          "Standard Decay": 0.903091,
+          "Near-Field Hotspot": 0.954638
+        }
+      },
+      {
+        "fold": 4,
+        "n_test": 25771,
+        "macro_f1": 0.853436,
+        "balanced_acc": 0.843217,
+        "recall_by_class": {
+          "Slow Decay": 0.708363,
+          "Standard Decay": 0.924462,
+          "Near-Field Hotspot": 0.896827
+        }
+      },
+      {
+        "fold": 5,
+        "n_test": 25461,
+        "macro_f1": 0.875932,
+        "balanced_acc": 0.866876,
+        "recall_by_class": {
+          "Slow Decay": 0.734405,
+          "Standard Decay": 0.934791,
+          "Near-Field Hotspot": 0.931433
+        }
+      }
+    ],
+    "per_fold_macro_f1_summary": {
+      "min": 0.853436,
+      "max": 0.887302,
+      "mean": 0.869214,
+      "sd": 0.01287
+    }
+  },
+  "spatial_block_cv_25km": {
+    "label": "conservative honest number (larger blocks = harder geographic gap)",
+    "macro_f1": 0.853354,
+    "balanced_accuracy": 0.844765,
+    "overall_accuracy": 0.870875,
+    "per_class": {
+      "class": [
+        "Slow Decay",
+        "Standard Decay",
+        "Near-Field Hotspot"
+      ],
+      "precision": [
+        0.802542,
+        0.882495,
+        0.907498
+      ],
+      "recall": [
+        0.707475,
+        0.918499,
+        0.908321
+      ],
+      "f1": [
+        0.752016,
+        0.900137,
+        0.907909
+      ],
+      "support": [
+        28736,
+        82993,
+        19841
+      ]
+    },
+    "confusion_matrix": [
+      {
+        "Slow Decay": 20330,
+        "Standard Decay": 8361,
+        "Near-Field Hotspot": 45,
+        "_row": "Slow Decay"
+      },
+      {
+        "Slow Decay": 4972,
+        "Standard Decay": 76229,
+        "Near-Field Hotspot": 1792,
+        "_row": "Standard Decay"
+      },
+      {
+        "Slow Decay": 30,
+        "Standard Decay": 1789,
+        "Near-Field Hotspot": 18022,
+        "_row": "Near-Field Hotspot"
+      }
+    ],
+    "n_folds": 5,
+    "block_size_m": 25000,
+    "per_fold": [
+      {
+        "fold": 1,
+        "n_test": 27890,
+        "macro_f1": 0.853995,
+        "balanced_acc": 0.837664,
+        "recall_by_class": {
+          "Slow Decay": 0.681091,
+          "Standard Decay": 0.939394,
+          "Near-Field Hotspot": 0.892507
+        }
+      },
+      {
+        "fold": 2,
+        "n_test": 24646,
+        "macro_f1": 0.836399,
+        "balanced_acc": 0.823068,
+        "recall_by_class": {
+          "Slow Decay": 0.640027,
+          "Standard Decay": 0.903816,
+          "Near-Field Hotspot": 0.92536
+        }
+      },
+      {
+        "fold": 3,
+        "n_test": 26076,
+        "macro_f1": 0.875502,
+        "balanced_acc": 0.876748,
+        "recall_by_class": {
+          "Slow Decay": 0.775824,
+          "Standard Decay": 0.906415,
+          "Near-Field Hotspot": 0.948006
+        }
+      },
+      {
+        "fold": 4,
+        "n_test": 26318,
+        "macro_f1": 0.825261,
+        "balanced_acc": 0.833378,
+        "recall_by_class": {
+          "Slow Decay": 0.688678,
+          "Standard Decay": 0.894332,
+          "Near-Field Hotspot": 0.917123
+        }
+      },
+      {
+        "fold": 5,
+        "n_test": 26640,
+        "macro_f1": 0.859774,
+        "balanced_acc": 0.834279,
+        "recall_by_class": {
+          "Slow Decay": 0.732397,
+          "Standard Decay": 0.94494,
+          "Near-Field Hotspot": 0.825501
+        }
+      }
+    ],
+    "per_fold_macro_f1_summary": {
+      "min": 0.825261,
+      "max": 0.875502,
+      "mean": 0.850186,
+      "sd": 0.01974
+    }
+  },
+  "random_5fold_cv_INFLATED": {
+    "macro_f1": 0.912316,
+    "balanced_accuracy": 0.908578,
+    "overall_accuracy": 0.921661,
+    "per_class": {
+      "class": [
+        "Slow Decay",
+        "Standard Decay",
+        "Near-Field Hotspot"
+      ],
+      "precision": [
+        0.880472,
+        0.930956,
+        0.938308
+      ],
+      "recall": [
+        0.83157,
+        0.946682,
+        0.947482
+      ],
+      "f1": [
+        0.855322,
+        0.938753,
+        0.942873
+      ],
+      "support": [
+        28736,
+        82993,
+        19841
+      ]
+    },
+    "label": "INFLATED / not the headline"
+  },
+  "inflation_gap_macro_f1": 0.043256,
+  "majority_baseline_accuracy": 0.63079,
+  "final_model_oob_brier": 0.058036,
+  "shap": {
+    "subsample_n": 5000,
+    "method": "exact per-class TreeSHAP (treeshap 0.4.0 + per-class unify shim)",
+    "additivity_check": {
+      "Slow Decay": {
+        "baseline": 0.22008,
+        "baseline_sd": 6.557074e-15,
+        "additivity_max_abs_err": 4.118927e-14
+      },
+      "Standard Decay": {
+        "baseline": 0.629666,
+        "baseline_sd": 1.311892e-14,
+        "additivity_max_abs_err": 6.43461e-14
+      },
+      "Near-Field Hotspot": {
+        "baseline": 0.150254,
+        "baseline_sd": 3.422279e-15,
+        "additivity_max_abs_err": 2.053913e-14
+      }
+    }
+  }
+}

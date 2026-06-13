@@ -1,0 +1,22 @@
+# OS / editor
+.DS_Store
+*.swp
+*~
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+
+# raw data and large intermediates (not distributed; see README to reproduce)
+dataset/
+Samples/
+geodata/
+logs/
+*_checkpoint*.rds

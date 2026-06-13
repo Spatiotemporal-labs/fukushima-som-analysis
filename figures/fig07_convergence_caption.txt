@@ -1,0 +1,1 @@
+Figure S1. Training convergence curve for the selected 5x5 SOM (8-feature set). The line shows the mean distance from observations to their best-matching unit at each training iteration. The vertical dashed line at iteration 1500 indicates the expected convergence point; the curve shows asymptotic plateau behavior.

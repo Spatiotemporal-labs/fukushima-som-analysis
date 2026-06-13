@@ -1,0 +1,1 @@
+Figure S3. Ward's D2 dendrogram of 25 SOM codebook vectors. Colored rectangles indicate the 4 clusters obtained by cutting the tree at the red dashed line (k=4). Leaf labels correspond to neuron indices.
