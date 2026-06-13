@@ -1,0 +1,12 @@
+{
+  "source": "JAEA EMDB",
+  "url": "https://radioactivity.nra.go.jp/emdb/",
+  "downloaded_at": "2026-03-23T02:03:56.804705+00:00",
+  "encoding": "UTF-8",
+  "content_code": 1,
+  "classification": "Air dose rate",
+  "items_downloaded": 70,
+  "files_completed": 463,
+  "files_skipped_empty": 517,
+  "files_failed": 0
+}
